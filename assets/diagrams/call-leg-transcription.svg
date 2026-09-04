@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Per-call-leg transcription topology</title>
+  <desc id="desc">Separate caller and agent call legs each move through a Snoop channel, external media, RTP gateway, and labeled transcription session.</desc>
+  <style>text{font-family:Arial,sans-serif;fill:#172033}.label{font-size:18px;font-weight:700}.small{font-size:14px;fill:#44506a}.box{stroke:#25314d;stroke-width:2;rx:12}.arrow{stroke:#52627f;stroke-width:3;fill:none;marker-end:url(#arrow)}</style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#52627f"/></marker></defs>
+  <rect width="1200" height="430" fill="#f7f9fc"/><text x="60" y="50" font-size="27" font-weight="700">Speaker attribution from PBX media topology</text>
+  <text class="small" x="60" y="80">Each known call leg owns its own media and transcription path.</text>
+  <g transform="translate(55,120)">
+    <g>
+      <rect class="box" width="135" height="75" fill="#e8f0ff"/><text class="label" x="67" y="33" text-anchor="middle">Caller leg</text><text class="small" x="67" y="55" text-anchor="middle">known source</text>
+      <rect class="box" x="195" width="145" height="75" fill="#eaf8f0"/><text class="label" x="267" y="33" text-anchor="middle">ARI Snoop</text><text class="small" x="267" y="55" text-anchor="middle">one per leg</text>
+      <rect class="box" x="400" width="165" height="75" fill="#fff4d8"/><text class="label" x="482" y="33" text-anchor="middle">External media</text><text class="small" x="482" y="55" text-anchor="middle">dedicated RTP</text>
+      <rect class="box" x="625" width="145" height="75" fill="#eee9ff"/><text class="label" x="697" y="33" text-anchor="middle">RTP gateway</text><text class="small" x="697" y="55" text-anchor="middle">audio adapter</text>
+      <rect class="box" x="830" width="235" height="75" fill="#e8f0ff"/><text class="label" x="947" y="33" text-anchor="middle">Transcript: caller</text><text class="small" x="947" y="55" text-anchor="middle">label from topology</text>
+      <path class="arrow" d="M135 38H190"/><path class="arrow" d="M340 38H395"/><path class="arrow" d="M565 38H620"/><path class="arrow" d="M770 38H825"/>
+    </g>
+    <g transform="translate(0,145)">
+      <rect class="box" width="135" height="75" fill="#ffe9ed"/><text class="label" x="67" y="33" text-anchor="middle">Agent leg</text><text class="small" x="67" y="55" text-anchor="middle">known source</text>
+      <rect class="box" x="195" width="145" height="75" fill="#eaf8f0"/><text class="label" x="267" y="33" text-anchor="middle">ARI Snoop</text><text class="small" x="267" y="55" text-anchor="middle">one per leg</text>
+      <rect class="box" x="400" width="165" height="75" fill="#fff4d8"/><text class="label" x="482" y="33" text-anchor="middle">External media</text><text class="small" x="482" y="55" text-anchor="middle">dedicated RTP</text>
+      <rect class="box" x="625" width="145" height="75" fill="#eee9ff"/><text class="label" x="697" y="33" text-anchor="middle">RTP gateway</text><text class="small" x="697" y="55" text-anchor="middle">audio adapter</text>
+      <rect class="box" x="830" width="235" height="75" fill="#ffe9ed"/><text class="label" x="947" y="33" text-anchor="middle">Transcript: agent</text><text class="small" x="947" y="55" text-anchor="middle">label from topology</text>
+      <path class="arrow" d="M135 38H190"/><path class="arrow" d="M340 38H395"/><path class="arrow" d="M565 38H620"/><path class="arrow" d="M770 38H825"/>
+    </g>
+  </g>
+  <text class="small" x="60" y="390">A transcription model improves text; it does not need to guess which participant produced the audio.</text>
+</svg>

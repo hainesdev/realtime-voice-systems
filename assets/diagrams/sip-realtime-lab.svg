@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">Controlled SIP Realtime lab</title>
+  <desc id="desc">A softphone connects through FreePBX to a pyVoIP simulator, which bridges G.711 mu-law media to an OpenAI Realtime session and produces a transcript.</desc>
+  <style>text{font-family:Arial,sans-serif;fill:#172033}.label{font-size:18px;font-weight:700}.small{font-size:14px;fill:#44506a}.box{stroke:#25314d;stroke-width:2;rx:14}.arrow{stroke:#52627f;stroke-width:3;fill:none;marker-end:url(#arrow)}</style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#52627f"/></marker></defs>
+  <rect width="1200" height="330" fill="#f7f9fc"/><text x="60" y="50" font-size="27" font-weight="700">Controlled SIP Realtime lab</text>
+  <g transform="translate(55,120)">
+    <rect class="box" width="150" height="90" fill="#e8f0ff"/><text class="label" x="75" y="38" text-anchor="middle">Softphone</text><text class="small" x="75" y="62" text-anchor="middle">lab extension</text>
+    <rect class="box" x="205" width="180" height="90" fill="#eaf8f0"/><text class="label" x="295" y="38" text-anchor="middle">FreePBX / Asterisk</text><text class="small" x="295" y="62" text-anchor="middle">SIP signaling + RTP</text>
+    <rect class="box" x="445" width="170" height="90" fill="#fff4d8"/><text class="label" x="530" y="38" text-anchor="middle">pyVoIP simulator</text><text class="small" x="530" y="62" text-anchor="middle">scenario + call lifecycle</text>
+    <rect class="box" x="675" width="170" height="90" fill="#eee9ff"/><text class="label" x="760" y="38" text-anchor="middle">G.711 mu-law</text><text class="small" x="760" y="62" text-anchor="middle">media bridge</text>
+    <rect class="box" x="905" width="180" height="90" fill="#ffe9ed"/><text class="label" x="995" y="38" text-anchor="middle">Realtime session</text><text class="small" x="995" y="62" text-anchor="middle">speech + turn handling</text>
+    <path class="arrow" d="M150 45H200"/><path class="arrow" d="M385 45H440"/><path class="arrow" d="M615 45H670"/><path class="arrow" d="M845 45H900"/>
+  </g>
+  <text class="small" x="60" y="275">Bounded internal scenarios make SIP, RTP, codec, and conversational behavior testable without public dialing.</text>
+</svg>

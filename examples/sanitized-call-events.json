@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp": "2026-09-01T14:00:00Z",
+    "event": "call_started",
+    "call_id": "demo-call-001",
+    "data": { "scenario": "synthetic-attribution-demo" }
+  },
+  {
+    "timestamp": "2026-09-01T14:00:01Z",
+    "event": "media_leg_attached",
+    "call_id": "demo-call-001",
+    "data": { "label": "caller", "source": "snoop-caller" }
+  },
+  {
+    "timestamp": "2026-09-01T14:00:01Z",
+    "event": "media_leg_attached",
+    "call_id": "demo-call-001",
+    "data": { "label": "agent", "source": "snoop-agent" }
+  },
+  {
+    "timestamp": "2026-09-01T14:00:03Z",
+    "event": "transcript_final",
+    "call_id": "demo-call-001",
+    "data": { "label": "caller", "text": "Hello, I would like to schedule a visit." }
+  },
+  {
+    "timestamp": "2026-09-01T14:00:05Z",
+    "event": "transcript_final",
+    "call_id": "demo-call-001",
+    "data": { "label": "agent", "text": "I can help with that. What day works for you?" }
+  },
+  {
+    "timestamp": "2026-09-01T14:00:12Z",
+    "event": "call_completed",
+    "call_id": "demo-call-001",
+    "data": { "outcome": "synthetic-demo-complete", "legs_finalized": ["caller", "agent"] }
+  }
+]

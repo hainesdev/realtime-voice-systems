@@ -1,0 +1,28 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Call artifacts
+logs/
+recordings/
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.pcap
+*.pcapng
+
+# Local/build artifacts
+.DS_Store
+Thumbs.db
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+dist/
+build/
