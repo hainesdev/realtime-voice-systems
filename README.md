@@ -16,7 +16,8 @@ customer data, recordings, endpoints, and operational configuration private.
 - **Interested in responsible AI call handling?** Start with the
   [AI receptionist case study](docs/case-studies/operlane-receptionist.md).
 - **Exploring SIP/RTP and low-latency AI?** See the
-  [SIP Realtime lab](docs/case-studies/sip-realtime-prototypes.md).
+  [SIP Realtime lab](docs/case-studies/sip-realtime-prototypes.md) and its
+  [public examples](examples/sip-realtime-lab/).
 
 ## What Daniel builds
 
@@ -59,7 +60,8 @@ practice. They connect SIP/RTP media to an OpenAI Realtime session while
 retaining native G.711 mu-law where practical.
 
 [Read the case study](docs/case-studies/sip-realtime-prototypes.md) ·
-[View the architecture](docs/architecture/sip-realtime-lab.md)
+[View the architecture](docs/architecture/sip-realtime-lab.md) ·
+[Browse the examples](examples/sip-realtime-lab/)
 
 ## Engineering approach
 

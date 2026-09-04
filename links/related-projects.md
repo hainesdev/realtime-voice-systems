@@ -13,11 +13,17 @@
   its original work; any local changes should be documented and attributed
   separately before public release.
 
+## Public SIP/Realtime examples
+
+- [Buyer-persona simulator](../examples/sip-realtime-lab/ai-customer-simulator/)
+  — controlled discovery-call practice with fictional personas.
+- [Interview-practice simulator](../examples/sip-realtime-lab/ai-interview-simulator/)
+  — controlled mock-interview practice with a fictional scenario.
+
 ## Private work represented here
 
 - PBX-integrated AI receptionist architecture
 - Event-sourced receptionist conversation core
-- Controlled SIP buyer-persona and interview simulators
 
 These projects are described through sanitized case studies because the source
 and operational artifacts contain private infrastructure, business, or call

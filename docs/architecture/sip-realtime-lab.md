@@ -3,18 +3,28 @@
 ## Purpose
 
 The SIP Realtime lab is a controlled extension-to-extension environment for
-testing AI buyer-persona and interview simulations over an existing PBX. It is
-not a public calling service and does not use PSTN dialing in its intended lab
-flow.
+testing AI buyer-persona and interview simulations over an existing PBX. The
+public examples use fictional scenarios, require a private test PBX, and are
+not a public calling service or a PSTN dialer.
 
 ```text
-Softphone / SIP extension
+Authorized SIP test extension
   <-> FreePBX / Asterisk
-  <-> pyVoIP client registered as a lab extension
+  <-> pyVoIP client registered as a dedicated lab extension
   <-> G.711 mu-law audio bridge
   <-> OpenAI Realtime session
-  -> structured call transcript
+  -> local structured call log
 ```
+
+## Public examples
+
+The code is organized as two independently runnable examples:
+
+- [Buyer-persona simulator](../../examples/sip-realtime-lab/ai-customer-simulator/)
+- [Interview-practice simulator](../../examples/sip-realtime-lab/ai-interview-simulator/)
+
+Each provides a safe `.env.example`. Actual extension credentials, PBX hosts,
+and call logs remain local and are excluded by the repository `.gitignore`.
 
 ## Modes
 
@@ -22,8 +32,8 @@ Softphone / SIP extension
   extension.
 - **Inbound:** The simulator registers and waits for another extension to call
   it.
-- **Scenario selection:** The same media stack can load a buyer persona or a
-  mock-interviewer scenario.
+- **Scenario selection:** The same media stack can load a fictional buyer
+  persona or a fictional mock-interviewer scenario.
 
 ## Media handling
 
@@ -34,7 +44,7 @@ converts at that boundary and restores mu-law for the external media path.
 
 ## Constraints made explicit
 
-The lab handles one call at a time. A shared extension registration cannot be
-used simultaneously by a normal softphone and the simulator, and inbound
-handling should be treated as a controlled-test capability until it has the
-same operational evidence as the outbound path.
+The lab handles one call at a time. A dedicated test extension should not be
+registered by another client at the same time, and inbound handling should be
+treated as a controlled-test capability until it has the same operational
+evidence as the outbound path.
