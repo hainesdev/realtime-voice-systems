@@ -1,8 +1,22 @@
 # Real-Time Voice Systems
 
-An engineering portfolio by Daniel Haines for practical voice infrastructure:
-PBX-integrated AI reception, reliably attributed call transcription, and
-controlled SIP/Realtime prototypes.
+Practical, trustworthy voice infrastructure by Daniel Haines: human-first
+AI reception, speaker-attributed transcription, and controlled SIP/Realtime
+systems.
+
+This is a public engineering portfolio and technical reference—not a hosted
+telephony product. It documents the decisions behind real systems while keeping
+customer data, recordings, endpoints, and operational configuration private.
+
+## Start here
+
+- **Want to see how call attribution can be reliable?** Read the
+  [speaker-attributed transcription case study](docs/case-studies/asterisk-call-leg-transcription.md)
+  and its [reference implementation](https://github.com/Operlane-Systems/asterisk-call-leg-transcription).
+- **Interested in responsible AI call handling?** Start with the
+  [AI receptionist case study](docs/case-studies/operlane-receptionist.md).
+- **Exploring SIP/RTP and low-latency AI?** See the
+  [SIP Realtime lab](docs/case-studies/sip-realtime-prototypes.md).
 
 ## What Daniel builds
 
@@ -60,9 +74,10 @@ data. The supporting notes describe the approach:
 
 ## Demonstration
 
-The planned demonstration will show a fully synthetic call-leg transcription
-run: separate caller and agent streams, labeled transcript events, and the
-resulting attributed output. See [the asset brief](assets/demo/README.md).
+A synthetic call-leg-transcription demonstration is in production. It will show
+separate caller and agent streams, labeled transcript events, and the resulting
+attributed output—without using a real call recording. See
+[the demo brief](assets/demo/README.md).
 
 ## Public-scope note
 
@@ -75,3 +90,6 @@ case studies and architecture material only.
 
 Daniel Haines · [GitHub](https://github.com/hainesdev) ·
 [Portfolio](https://dhaines.dev)
+
+I welcome conversations about real-time audio, speech systems, mobile audio,
+telephony infrastructure, and applied AI engineering.
