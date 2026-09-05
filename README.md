@@ -103,11 +103,13 @@ data. The supporting notes describe the approach:
 - [Privacy and recording considerations](docs/engineering/privacy-and-call-recording.md)
 - [Testing strategy](docs/engineering/testing-strategy.md)
 
-## Demonstration
+## Planned demonstration
 
-A synthetic call-leg-transcription demonstration is in production. It will show
-separate caller and agent streams, labeled transcript events, and the resulting
-attributed output—without using a real call recording. See
+A synthetic call-leg-transcription demonstration is **planned, not yet
+published**. The brief specifies what it will cover — separate caller and agent
+streams, labeled transcript events, and the resulting attributed output, using
+generated audio rather than any real call recording — along with the redaction
+rules it has to meet before publication. See
 [the demo brief](assets/demo/README.md).
 
 ## Public-scope note
