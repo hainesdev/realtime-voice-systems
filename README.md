@@ -18,6 +18,9 @@ customer data, recordings, endpoints, and operational configuration private.
 - **Exploring SIP/RTP and low-latency AI?** See the
   [SIP Realtime lab](docs/case-studies/sip-realtime-prototypes.md) and its
   [public examples](examples/sip-realtime-lab/).
+- **Interested in live speech translation under hostile acoustics?** See
+  [ChurchBridge](https://github.com/hainesdev/churchbridge), a separate project
+  covered below.
 
 ## What Daniel builds
 
@@ -27,6 +30,8 @@ customer data, recordings, endpoints, and operational configuration private.
   than speaker-label guesses from a mixed recording.
 - **SIP and Realtime prototypes** that exercise signaling, RTP media, G.711
   audio, turn detection, and operational logging end to end.
+- **Live speech translation and captioning** for rooms where the audio is
+  hostile and the speaker cannot be asked to change how they talk.
 
 ## Featured work
 
@@ -62,6 +67,30 @@ retaining native G.711 mu-law where practical.
 [Read the case study](docs/case-studies/sip-realtime-prototypes.md) ·
 [View the architecture](docs/architecture/sip-realtime-lab.md) ·
 [Browse the examples](examples/sip-realtime-lab/)
+
+### ChurchBridge — live sermon translation
+
+A separate project, and the largest of these: ChurchBridge captures live Spanish
+preaching, treats it as *discourse* rather than a stream of sentences, and
+delivers English captions to a sanctuary display and to phones in the pews.
+
+The interesting engineering is downstream of recognition. A discourse-aware
+buffer waits for a complete thought instead of a complete sentence. A fast
+machine-translation path and a slower LLM path run at different speeds so
+immediacy and quality stop competing. One deterministic gate decides what
+reaches the screen. Head-anchored caption merges mean text never jumps position
+when fragments are absorbed. And on the iPhone capture path, a streaming
+DeepFilterNet3 implementation runs on device — with a mix chosen by listening
+rather than by a metric, after full-strength suppression measured beautifully
+and made the captions worse.
+
+It carries its own license: source-available under PolyForm Noncommercial,
+rather than the Apache-2.0 terms of this repository.
+
+[Product overview and architecture](https://github.com/hainesdev/churchbridge) ·
+[Platform](https://github.com/hainesdev/churchbridge-platform) ·
+[iPhone app](https://github.com/hainesdev/churchbridge-ios) ·
+[Benchmark harness](https://github.com/hainesdev/churchbridge-audio-bench)
 
 ## Engineering approach
 
